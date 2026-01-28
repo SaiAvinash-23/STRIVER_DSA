@@ -39,6 +39,7 @@ public class DirectredGraph {
         for (int i=1; i <= n; i++) {
             System.out.println(i + " -> " + adjList.get(i));
         }
+        sc.close();
     }
 
     static void addEdge_matrix(int[][] matrix, int u, int v) {
