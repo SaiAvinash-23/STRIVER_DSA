@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Basic {
     public static void main(String[] args) {
-        int N = 5, M = 6;
+        int N = 5;
         ArrayList<ArrayList<Integer>> adjList= new ArrayList<>();
 
         for (int i=0; i <= N; i++) {
