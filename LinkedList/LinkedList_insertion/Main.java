@@ -47,16 +47,28 @@ public class Main {
         return false;
     }
 
-    // public static void insertHead(ListNode head, int source) {
-    //     ListNode 
-    // }
+    public static ListNode insertHead(ListNode head, int source) {
+        ListNode temp = head;
+
+        head = new ListNode(source);
+        head.next = temp;
+
+        temp = null;
+
+        return head;
+    }
 
     public static void main(String[] args) {
         int[] arr = {2, 3, 4, 5, 6, 7, 8};
 
         ListNode head = arrToListNode(arr);
 
+        System.out.println("Before insertion: ");
         printLinkedList(head);
+
+        ListNode newhead = insertHead(head, 1);
+        System.out.println("After insertion: ");
+        printLinkedList(newhead);
     }
 }
 
