@@ -1,5 +1,4 @@
 package LinkedList.LinkedListOperations;
-import java.util.*;
 
 public class Main {
     public static Node arrayToLinkedList(int[] arr) {

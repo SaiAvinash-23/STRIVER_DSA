@@ -1,7 +1,4 @@
 package LinkedList.LinkedList_Deletion;
-
-import java.util.List;
-
 public class Main {
     public static ListNode arrToLinkedList(int[] arr) {
         int size = arr.length;

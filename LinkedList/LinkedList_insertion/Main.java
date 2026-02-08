@@ -1,5 +1,4 @@
 package LinkedList.LinkedList_insertion;
-import java.util.*;
 
 public class Main {
     public static ListNode arrToListNode(int[] arr) {
