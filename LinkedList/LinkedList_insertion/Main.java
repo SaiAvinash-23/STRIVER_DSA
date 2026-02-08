@@ -58,15 +58,30 @@ public class Main {
         return head;
     }
 
+    public static ListNode insertionLast(ListNode head, int X) {
+        ListNode newNode = new ListNode(X);
+
+        ListNode current = head;
+
+        while (current != null) {
+            if(current.next == null) {
+                current.next = newNode;
+                newNode.next = null;
+            }     
+            current = current.next;
+        }
+        return head;
+    }
+
     public static void main(String[] args) {
-        int[] arr = {2, 3, 4, 5, 6, 7, 8};
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
 
         ListNode head = arrToListNode(arr);
 
         System.out.println("Before insertion: ");
         printLinkedList(head);
 
-        ListNode newhead = insertHead(head, 1);
+        ListNode newhead = insertionLast(head, 9);
         System.out.println("After insertion: ");
         printLinkedList(newhead);
     }

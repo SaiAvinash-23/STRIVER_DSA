@@ -60,6 +60,41 @@ public class Main {
         return head;
     }
 
+    public static ListNode deleteLastNode(ListNode head) {
+        if (head == null || head.next == null) return null;
+        ListNode temp = head;
+
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+
+        temp.next = null;
+
+        return head;
+    }
+
+    public static ListNode deleteKthNode(ListNode head, int K) {
+        if (head == null) return null;
+
+        if (K == 1) {
+            ListNode temp = head;
+            head = head.next;
+            return head;
+        }
+
+        ListNode temp = head;
+        for (int i = 0; temp != null && i < K-2; i++) {
+            temp = temp.next;
+        }
+
+        if (temp == null || temp.next == null) return head;
+
+        ListNode next = temp.next.next;
+        temp.next = next;
+
+        return head;
+    }
+
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
         int target = 5;
@@ -70,7 +105,7 @@ public class Main {
         System.out.println("Linked list before deletion");
         printLinkedList(head);
 
-        head = deleteHead(head);
+        head = deleteKthNode(head, 2);
         System.out.println("Linked list after deletion");
         printLinkedList(head);
 
